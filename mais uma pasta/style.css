@@ -1,0 +1,244 @@
+/*ocorre quando o ponteiro esta sobre o elemento*/
+
+a:hover {
+  color: red;
+  background-color: blue;
+  font-size: 80px;
+}
+
+/* O corre quando o elemento esta sendo pressionado ou utilizado por algum gatilho */
+button:active {
+  background-color: gold;
+}
+
+/*Ocorre quando o campo está selecionado*/
+input:focus {
+  outline: 2px solid blue;
+}
+
+/* ocorre quando a caixa esta marcada*/
+input:checked {
+  accent-color: green;
+}
+
+/*seleciona o primeiro item da lista*/
+li:first-child {
+  color: yellow;
+}
+
+li:nth-child(even) {
+  background-color: gray;
+}
+li:nth-child(odd) {
+  background-color: burlywood;
+}
+
+/*Selecione campos obrigatorios */
+input:required {
+  border: 2px solid orange;
+}
+
+/* Seleciona um email invalido depois que algo foi digitado*/
+input[typy="email"]:invalid:not(:placeholder-shown) {
+  border: 2px solid red;
+}
+.palco {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  top: 300px;
+  border-bottom: 2px solid black;
+background-color: antiquewhite;
+  
+}
+.caixa {
+  background-color: steelblue;
+  width: 120px;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+   bottom: 0;
+  left: 80px;
+  width: 40px;
+  height: 40px;
+  
+
+  animation: mover 2s infinite alternate;
+}
+
+@keyframes mover {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(100px);
+  }
+}
+
+.palco2 {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  top: 300px;
+  border-bottom: 2px solid black;
+  background-color: antiquewhite;
+  
+}
+
+.bola1 {
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+  width: 40px;
+  height: 40px;
+  background-color: tomato;
+  animation: quicar 2s infinite;
+}
+@keyframes quicar {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100px);
+  }
+}
+
+.palco3 {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  top: 300px;
+  border-bottom: 2px solid black;
+  background-color: antiquewhite;
+}
+
+.bola2 {
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+  width: 40px;
+  height: 40px;
+  background-color: tomato;
+  
+  animation: quicar2 1s infinite;
+}
+@keyframes quicar2 {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-100px) translateY(-100px);
+  }
+
+}
+.palco4 {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  top: 300px;
+  border-bottom: 2px solid black;
+background-color: antiquewhite;
+  
+}
+.caixa4 {
+  background-color: steelblue;
+  width: 120px;
+  text-align: center;
+  color: white;
+  border: 1px solid black;
+   bottom: 0;
+  left: 80px;
+  width: 40px;
+  height: 40px;
+  
+
+  animation: mover 1s infinite alternate;
+}
+
+@keyframes mover {
+  from {
+    transform: translateY(-100px);
+  }
+
+  to {
+    transform: translateY(-200px);
+  }
+}
+
+
+
+.palco5 {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  top: 300px;
+  border-bottom: 2px solid black;
+ background-color: antiquewhite;
+}
+
+.bola3 {
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(19, 255, 3);
+  
+  animation: quicar3 3s infinite;
+}
+@keyframes quicar3 {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(-100px) translateY(-100px);
+  }
+}
+.palco6 {
+  position: relative;
+  width: 200px;
+  height: 150px;
+  top: 300px;
+  border-bottom: 2px solid black;
+background-color: antiquewhite;
+  
+}
+
+.bola4 {
+  position: absolute;
+  bottom: 0;
+  left: 80px;
+  width: 40px;
+  height: 40px;
+  background-color: tomato;
+  animation: quicar4 1s infinite;
+ 
+  
+}
+@keyframes quicar4 {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100px);
+  }
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.palco4:hover .bola4{
+    animation-play-state: paused;
+   
+  animation: fade 0.4s ease infinite normal;
+}
+.palco3:hover .bola3{
+    animation-duration: 30ms;
+}
+.palco2:focus-visible .bola2{
+    animation-duration: 90ms;
+}
+
